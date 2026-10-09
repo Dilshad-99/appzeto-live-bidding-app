@@ -1,0 +1,14 @@
+{
+  "name": "appzeto-live-bidding-app",
+  "version": "1.0.0",
+  "description": "Real-Time Auction & Bidding Platform with Strict Concurrency Control & Dual-Layer Mutex",
+  "private": true,
+  "scripts": {
+    "seed": "npm --prefix backend run seed",
+    "test": "npm --prefix backend test",
+    "start:backend": "npm --prefix backend start",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build"
+  }
+}

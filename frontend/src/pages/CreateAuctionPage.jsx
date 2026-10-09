@@ -211,7 +211,18 @@ export const CreateAuctionPage = () => {
       return;
     }
 
-    const validImages = imageUrls.filter((url) => url && url.trim().length > 0);
+    const normalizeUrl = (u) => {
+      if (!u) return '';
+      const trimmed = u.trim();
+      if (!trimmed) return '';
+      if (/^https?:\/\//i.test(trimmed)) return trimmed;
+      return `https://${trimmed}`;
+    };
+
+    const validImages = imageUrls
+      .map(normalizeUrl)
+      .filter((url) => url.length > 0);
+
     const finalImages = validImages.length > 0
       ? validImages
       : [CATEGORY_DEFAULT_IMAGES[category] || 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1000'];
@@ -384,7 +395,7 @@ export const CreateAuctionPage = () => {
                   <div key={idx} className="flex items-center gap-2">
                     <div className="relative flex-1">
                       <input
-                        type="url"
+                        type="text"
                         value={url}
                         onChange={(e) => handleImageUrlChange(idx, e.target.value)}
                         placeholder={
