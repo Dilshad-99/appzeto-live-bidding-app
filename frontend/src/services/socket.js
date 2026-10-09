@@ -7,8 +7,11 @@ export const initSocketClient = (token) => {
     socket.disconnect();
   }
 
-  // Connect to backend port 5000 directly when running on Vite dev server
-  const serverUrl = window.location.port === '5173' ? 'http://localhost:5000' : window.location.origin;
+  // Connect to backend URL based on environment or Vite dev server
+  const serverUrl =
+    import.meta.env.VITE_SOCKET_URL ||
+    (import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/api\/?$/, '') : '') ||
+    (window.location.port === '5173' ? 'http://localhost:5000' : window.location.origin);
 
   socket = io(serverUrl, {
     auth: { token },
