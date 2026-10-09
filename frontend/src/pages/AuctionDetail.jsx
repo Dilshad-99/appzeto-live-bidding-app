@@ -208,7 +208,7 @@ export const AuctionDetail = () => {
   const reserveMet = !auction.reservePrice || auction.currentHighestBid >= auction.reservePrice;
 
   return (
-    <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6 py-4 sm:py-5 space-y-4">
+    <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-4 sm:py-5 space-y-4">
       {/* Back Link & Socket Status Indicator */}
       <div className="flex items-center justify-between">
         <Link

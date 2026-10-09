@@ -256,7 +256,7 @@ export const CreateAuctionPage = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6 sm:space-y-8">
+    <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-6 sm:py-8 space-y-6 sm:space-y-8">
       <div>
         <h1 className="text-2xl sm:text-3xl font-extrabold font-heading text-black tracking-tight">
           Seller Portal & Listing Management

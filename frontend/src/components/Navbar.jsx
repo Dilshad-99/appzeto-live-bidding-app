@@ -29,8 +29,8 @@ export const Navbar = () => {
   return (
     <>
       {/* Top Demo Banner for Rapid Testing across Devices — Warm Ivory + Gold */}
-      <div className="bg-[#FAF7F0] text-[#1E293B] text-xs py-1.5 px-4 border-b border-[#E8DEBE]">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div className="bg-[#FAF7F0] text-[#1E293B] text-xs py-1.5 border-b border-[#E8DEBE]">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <span className="flex items-center gap-1 text-[#8C6608] font-black">
               <Sparkles size={13} className="text-[#D4AF37]" /> Evaluator Persona Switcher:
@@ -61,7 +61,7 @@ export const Navbar = () => {
 
       {/* Main Responsive Navbar — Pure White + Gold */}
       <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E8DEBE] shadow-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-10">
           <div className="flex items-center justify-between h-16">
             {/* Left: Brand Logo & Desktop Links */}
             <div className="flex items-center gap-6 lg:gap-8">

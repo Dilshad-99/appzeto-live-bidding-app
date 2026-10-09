@@ -60,7 +60,7 @@ export const Marketplace = () => {
   const featuredAuction = auctions.find((a) => a.status === 'LIVE') || auctions[0];
 
   return (
-    <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6 py-4 sm:py-5 space-y-4 sm:space-y-5">
+    <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-4 sm:py-5 space-y-4 sm:space-y-5">
       {/* Split Hero Banner (Option C: Warm Light Luxury Background with Edge-to-Edge Media) */}
       {featuredAuction && statusTab === 'ALL' && (
         <div className="relative overflow-hidden rounded-2xl bg-white border border-[#E8DEBE] shadow-xs">
